@@ -8,20 +8,12 @@ int m=0,*p,sn,arg,arg2,tkt,tkt_pr,nt=0,sti,foundu=0,foundp=0,pas_chk=0,mv_str=0,
 double cost=0;
 int  pas_rak=0;
 char cus_in;
-string name[100],tkt_pnt,pass,cus_id,cus_pas,user,hall_name;//pass is to save the password
+string name[100],tkt_pnt,pass,cus_id,cus_pas,user,hall_name;
 
-int ar[100][100][100][12][18],tkt_row[12],tkt_col[18],str_tim[100];//last two array r to be used to print ticket
-//str_tim is saving the no.of show of a particular movie
-/*in the array ar
-1st arg is for movie no.
-2nd arg is for particular showtime of particular movie
-3rd arg is for rows
-4th arg is for columns*/
+int ar[100][100][100][12][18],tkt_row[12],tkt_col[18],str_tim[100];
 string tim[100][100];
-/*ITS THE string array to store the timings of a particular movie
-1st argument is for movie number and and argument is for no.timings that
-particular runs*/
-string timing[100];//to store various timings of movie in file
+
+string timing[100];
 class movie_booking
 {
 
