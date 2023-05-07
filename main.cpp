@@ -1,34 +1,15 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-// #include <conio.h>
-// #include <malloc.h>
 #include <fstream>
 using namespace std;
-int obn,ext,prnt_once=0,dir_customer=0;//to save the hall number
-//dir_customer=0 if the user directly goes to user instead of manager
-//prnt_once to print once the term user foun
+int obn,ext,prnt_once=0,dir_customer=0;
 int m=0,*p,sn,arg,arg2,tkt,tkt_pr,nt=0,sti,foundu=0,foundp=0,pas_chk=0,mv_str=0,data_store=0;
 double cost=0;
-//data_store=0 TO STORE THAT THE DATA IS SUCCESSFULLY STORED IN FILE
-//mv_str=0 to run the loop when data is being brought from file to compiler
-int  pas_rak=0;//to store the return value of function password_check()
-//sn is variable for show number in manager function N m is for number of shows in a day
-//pas_chk stores the value i.e password matched or not
-//foundu to storevalue if user exists
-//foundo to storevalue if password is correct
+int  pas_rak=0;
 char cus_in;
-//cus_in is for storing if customer is new or existing
-//sti is for showtime input in manager func
-//st is for showtime check the seat_disp func
-//tkt is to count the no.of tickets to be booked by customer
-//tkt_pr is to print the no.of tickets to be booked
-//nt is the number of timings of a particular movie
 string name[100],tkt_pnt,pass,cus_id,cus_pas,user,hall_name;//pass is to save the password
-//hall_name to store the hall name
-//cus_id for storing customer id
-//cus_pas is for storing customer password
-//tkt_pnt[100] to print the movie name in ticket
+
 int ar[100][100][100][12][18],tkt_row[12],tkt_col[18],str_tim[100];//last two array r to be used to print ticket
 //str_tim is saving the no.of show of a particular movie
 /*in the array ar
