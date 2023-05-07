@@ -55,7 +55,7 @@ public:
 void movie_booking::first()
 {
     int i;
-    char in='c',ind,cus;//cus is customer and ind is manager input
+    char in='c',ind,cus;
     cout<<"\n\n\t\t\t\t\tTO ENTER MANAGER LOGIN PRESS 'o' or 'O' ELSE ANY OTHER KEY FOR CUSTOMER BOOKING\n";
     cout<<"\t\t\t\t\t\t\t";
     cin>>ind;
@@ -67,13 +67,13 @@ void movie_booking::first()
             (*this).pass_proctect();
         if(pass=="KASAW")
         {
-            (*this).manager();//the manager mode to set the number of seats available for booking
+            (*this).manager();
             pas_count=3;
         }
 
         else
         {
-        cout<<"PASSWORD ENTERED IS WRONG!!"<<" ATTEMPTS REMAINING = "<<2-pas_count<<" \n";//pas_count is to count no. of attempts left
+        cout<<"PASSWORD ENTERED IS WRONG!!"<<" ATTEMPTS REMAINING = "<<2-pas_count<<" \n";
             pas_count++;
         }
 
@@ -84,8 +84,7 @@ void movie_booking::first()
     cout<<"\n\n\t\t\t\t\t\t\tDEAR CUSTOMER TO BOOK SEATS PRESS 'y' or 'Y' \n";
     cout<<"\t\t\t\t\t\t\t";
     cin>>cus;
-    //HERE I HAVE TO ADD THE CUSTOMER LOGIN FUNCTION
-     if((cus=='y')||(cus=='Y'))//the customer part starts here
+     if((cus=='y')||(cus=='Y'))
      {  cout<<"\n\t\t\t\t\t\t\tIF YOU ARE NEW CUSTOMER PRESS N/n TO SIGNUP\n";
         cout<<"\t\t\t\t\t\t\t";
         cin>>cus_in;
@@ -98,10 +97,8 @@ void movie_booking::first()
 
         }
 
-//cout<<"+++++++++++"<<pas_rak<<"--------"<<data_store<<endl;to check the values
         cout<<"\t\t\t\t\t\t\t";
         cout<<"PRESS ANYKEY TO CONTINUE\n";
-// CLEAR();
  system("clear");
          if(pas_rak!=0||data_store!=0)
          {  cout<<"\n\n\t\t\t\t\t\tTHE SEATS AVAILABLE ARE:\n";
